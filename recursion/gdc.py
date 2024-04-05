@@ -1,10 +1,8 @@
 def gdc(a, b):
-    if a == b:
+    if b == 0:
         return a
-    elif a > b:
-        return gdc(a-b, b)
-    elif a < b:
-        return gdc(a, b-a)
+    else:
+        return gdc(b, a % b)
 
 
-print(gdc(17, 37))
+print(gdc(48, 42))
